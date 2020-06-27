@@ -1,0 +1,122 @@
+{% extends "template.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card shadow">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">User information</h6>
+            </div>
+            <div class="card-body">
+                <form action="/predict_client" method="post">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="age">Age</label>
+                            <input type="text" class="form-control" id="age">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="experience">Experience</label>
+                            <input type="text" class="form-control" id="experience">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="income">Income</label>
+                            <input type="text" class="form-control" id="income">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="zipCode">ZIP Code</label>
+                            <input type="text" class="form-control" id="zipCode">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="family">Family</label>
+                            <input type="text" class="form-control" id="family">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="ccAvg">CCAvg</label>
+                            <input type="text" class="form-control" id="ccAvg">
+                        </div>
+                  </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                            <label for="educationLevel">Education level</label>
+                            <select class="form-control" id="educationLevel">
+                              <option value="1">Undergrad</option>
+                              <option value="2">Graduate</option>
+                              <option value="3">Advanced/Professional</option>
+                            </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="mortgage">Mortgage</label>
+                          <input type="text" class="form-control" id="mortgage">
+                      </div>
+                  </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                          <label>Securities Account</label>
+                          <div class="col-sm-6">
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="securitiesAccount" id="securitiesAccountYes" value="1">
+                                  <label class="form-check-label" for="securitiesAccountYes">Yes</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="securitiesAccount" id="securitiesAccountNo" value="0">
+                                  <label class="form-check-label" for="securitiesAccountNo">No</label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label>CD Account</label>
+                          <div class="col-sm-6">
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="cdAccount" id="cdAccountYes" value="1">
+                                  <label class="form-check-label" for="cdAccountYes">Yes</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="cdAccount" id="cdAccountNo" value="0">
+                                  <label class="form-check-label" for="cdAccountNo">No</label>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                    <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Online</label>
+                        <div class="col-sm-6">
+                        <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="online" id="onlineYes" value="1">
+                              <label class="form-check-label" for="onlineYes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="online" id="onlineNo" value="0">
+                            <label class="form-check-label" for="onlineNo">No</label>
+                        </div>
+                            </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                    <label>CreditCard</label>
+                        <div class="col-sm-6">
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="creditCard" id="creditCardYes" value="1">
+                              <label class="form-check-label" for="creditCardYes">Yes</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="creditCard" id="creditCardNo" value="0">
+                              <label class="form-check-label" for="creditCardNo">No</label>
+                          </div>
+                        </div>
+                  </div>
+                  </div>
+                    <div class="form-group row">
+                    <div class="col-sm-12">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
