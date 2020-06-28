@@ -6,10 +6,13 @@ from flask import Flask
 from flask import render_template, request, redirect
 from werkzeug.utils import secure_filename
 
+import mlflow.sklearn
 import model_utils
 
 app = Flask(__name__)
-model = joblib.load("static/model/model.joblib")
+#model = joblib.load("static/model/model.joblib")
+model = mlflow.sklearn.load_model(
+        model_uri=f's3://co.techtutor/mlflow/artifacts/0/32af3e573b234271a5b6eee2d26cd076/artifacts/model')
 
 UPLOAD_FOLDER = 'uploads/'
 ALLOWED_EXTENSIONS = ['csv']
